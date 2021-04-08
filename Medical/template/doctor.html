@@ -1,0 +1,74 @@
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns="http://www.w3.org/1999/html">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<form method="post" action="display">
+     {% csrf_token %}
+    <center><h1 style="color:#4287f5;font-family:Fantasy;">Book An Appoinment</h1></center>
+    <table align="center">
+        <tr>
+        <td>Name</td>
+            <td><input type="text" name="name" placeholder="Enter your name"> </td>
+        </tr>
+
+        <tr>
+        <td>Phone</td>
+            <td><input type="number" name="phone" placeholder="Enter your Phone Number"> </td>
+        </tr>
+
+        <tr>
+        <td>Email</td>
+            <td><input type="email" name="email" placeholder="Enter your Emial-id"> </td>
+        </tr>
+
+        <tr>
+        <td>Department</td>
+            <td><select  name="dept" >
+                <option>Select Department</option>
+                {% for x in demo1 %}
+                <option>{{x.name}}</option>
+                {% endfor %}
+            </select>
+            </td>
+        </tr>
+
+        <td>Doctor</td>
+            <td><select  name="doc" >
+                <option>Select Doctor</option>
+                {% for y in demo2 %}
+                <option>{{y.name}}</option>
+                {% endfor %}
+
+            </select>
+            </td>
+        </tr>
+
+        <tr>
+        <td>Date</td>
+            <td><input type="date" name="date"> </td>
+        </tr>
+<table align="center">
+        <tr>
+
+            <td ><input type="submit" name="submit"> </td>
+
+        </tr>
+    </table>
+
+    </table>
+
+
+</form>
+
+{% endblock %}
+
+<!--</body>-->
+<!--</html>-->

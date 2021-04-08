@@ -1,0 +1,46 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div>
+    <div>
+        <h1 style="color:#4287f5;font-family:Fantasy;">Booking Data of Patients</h1>
+    </div>
+    <div>
+
+
+            {% for obb in tty %}
+<table >
+    <tr style="color:#36300a;">
+        <td>Name :{{obb.name}}</td>
+        <td>Department :{{obb.dept}}</td>
+        <td>Docter :{{obb.doc}}</td>
+        <td>Booking to :{{obb.date}}</td>
+    </tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+</table>
+            {% endfor %}
+
+
+    </div>
+</div>
+
+
+{% endblock %}
+<!--</body>-->
+<!--</html>-->
